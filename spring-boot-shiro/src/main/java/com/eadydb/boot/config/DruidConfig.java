@@ -1,4 +1,4 @@
-package com.eadydb.boot.swagger.config;
+package com.eadydb.boot.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;

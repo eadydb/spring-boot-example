@@ -10,7 +10,8 @@
     <modules>
         <module>spring-boot-swagger</module>
         <module>spring-boot-mybatis</module>
-        <module>spring-boot-mybatis2</module>
+        <module>spring-boot-rabbitmq</module>
+        <module>spring-boot-shiro</module>
     </modules>
     <packaging>pom</packaging>
 

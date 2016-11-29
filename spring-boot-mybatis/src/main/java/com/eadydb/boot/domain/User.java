@@ -1,35 +1,23 @@
 package com.eadydb.boot.domain;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by dengbin on 16-11-14.
  */
-@Entity
 public class User implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column
     private String username;
 
-    @Column
     private String password;
 
-    @Column
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
-    @Column
     private String token;
 
-    @Column
     private String salt;
 
     public Integer getId() {
@@ -78,5 +66,17 @@ public class User implements Serializable {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", createTime=" + createTime +
+                ", token='" + token + '\'' +
+                ", salt='" + salt + '\'' +
+                '}';
     }
 }
