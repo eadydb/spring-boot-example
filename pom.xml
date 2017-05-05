@@ -12,6 +12,7 @@
         <module>spring-boot-mybatis</module>
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-shiro</module>
+        <module>spring-boot-security-kaptcha</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -19,7 +20,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.2.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <properties>

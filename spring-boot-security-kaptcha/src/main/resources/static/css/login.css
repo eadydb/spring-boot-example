@@ -1,0 +1,35 @@
+body,html,ul,li,p,line,h1,h2,h3,h4,h5,h6{margin: 0; padding: 0;}
+body{background-color:#fff;}
+header{height:120px; width:100%; border-bottom:4px solid #c5a97f; background-color:#8b0b42; clear:both; overflow:hidden;}
+.u-logo{height:120px; width:960px; background-image:url(../images/login/logo2.png); background-repeat:no-repeat; margin:auto;}
+.g-content{display:block; height:420px; width:100%; background-color:#FFF; padding-top:60px; overflow:hidden;}
+.g-ctn{height:400px; width:960px; margin:auto;}
+.g-ctn .m-lf{height:400px; width:540px;  margin-right:80px; float:left; background-color:#fff;   border-radius:2px; overflow:hidden;}
+.g-ctn .m-rt{height:400px; width:340px;  float:left;  border-radius:2px; overflow:hidden;}
+
+/*登录区域*/
+.m-cat{ width:320px; margin:auto; height:280px; font-size:14px; }
+.u-sr{height:60px; width:320px;}
+.u-sr .f-user{width:316px; background-image:url(../images/login/icon01.png); background-position:0 0; background-repeat:no-repeat;}
+.u-sr .f-pswd{width:316px; background-image:url(../images/login/icon01.png); background-position:0 -42px; background-repeat:no-repeat;}
+.u-sr input{height:42px; border:1px solid #dcd5c7; line-height:44px; text-indent:44px; outline:medium;}
+.u-sr input:focus{border:1px solid #b7975c;}
+
+.u-yz{height:66px; width:320px;}
+.u-yz .f-yzm{height:50px; width:160px; float:left; margin-right:20px;}
+.u-yz .f-yzmtp{height:50px; width:140px; float:left;}
+.u-yz .f-yzm input{height:42px; width:100%; border:1px solid #dcd5c7; line-height:44px; text-indent:44px; outline:medium;  background-image:url(../images/login/icon01.png); background-position:0 -84px; background-repeat:no-repeat;}
+.u-yz .f-yzm input:focus{border:1px solid #b7975c;}
+
+.u-btn{height:46px; width:100%; line-height:46px; text-align:center; font-size:16px; color:#fff; border:none; background-color:#b7975c; cursor:pointer;}
+.u-btn:hover{background-color:#c2a061;}
+.u-find{height:50px; width:100%; line-height:50px; font-size:12px;}
+.u-find a{color:#09F; text-decoration:none; text-align:right; cursor:pointer;}
+.u-find a:hover{text-decoration:underline;}
+
+/*公告区域*/
+.u-news p{ text-indent:2em; text-align:justify; line-height:24px; margin-bottom:10px; color:#333;}
+footer{width:100%; overflow:hidden;border-top:1px solid #ddd;height: 80px;position: fixed;bottom: 0;background-color:#f8f8f8;}
+.u-ft{width:960px; margin:10px auto; overflow:hidden;}
+.u-ft ul{width:100%;}
+.u-ft ul li{height:20px; line-height:24px; color:#666; font-size:12px;}

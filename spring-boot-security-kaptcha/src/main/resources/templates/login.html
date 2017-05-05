@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thyemleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>深圳大学-体育场馆管理</title>
+    <link rel="stylesheet" th:href="@{css/login.css}"/>
+</head>
+
+<body>
+<header>
+    <div class="u-logo"></div>
+</header>
+<div class="g-content">
+    <div class="g-ctn">
+        <div class="m-lf">
+            <div style="height:60px; margin-bottom:20px;  border-bottom:2px solid #eee;"><img th:src="@{images/login/icon02.png}" style="width:180px;height:60px;" /></div>
+            <div class="u-news">
+                <p>
+                    对于外界普遍关注的新区如何建设、新区如何吸引人才等问题，根据纪实披露，习近平总书记曾明言，新区的规划发展要以人为本，人往高处走，水往低处流，公共服务水平高的地方更具吸引力。国家发改委主任何立峰则表示，新区的基本公共服务水平甚至可能会高于现在的北京。</p>
+                <p>
+                    今年2月23日，中共中央总书记、国家主席、中央军委主席习近平专程来到河北省保定市安新县，实地察看规划新区核心区概貌。在大王镇的田野上，在展开的一张规划图前，总书记仔细察看区位、规划状况，详细了解人口搬迁安置等情况。据了解，新区的人口搬迁主要是就地安置。</p>
+            </div>
+        </div>
+        <div class="m-rt">
+            <div style="height:60px; margin-bottom:30px;  border-bottom:2px solid #eee;"><img th:src="@{images/login/icon03.png}" width="180" height="60"/></div>
+            <form th:action="@{/login}" method="post">
+                <div class="m-cat">
+                    <div class="u-sr">
+                        <input name="username" id="username" type="text" class="f-user" placeholder="用户名"/>
+                    </div>
+                    <div class="u-sr">
+                        <input name="password" id="password" type="password" class="f-pswd" placeholder="密码"/>
+                    </div>
+                    <div class="u-yz">
+                        <div class="f-yzm">
+                            <input name="kaptcha" id="kaptcha" type="text" placeholder="验证码"/>
+                        </div>
+                        <div class="f-yzmtp">
+                            <img th:src="@{/kaptcha/image}" id="kaptchaImage" style="width: 140px;height: 44px;"/>
+                        </div>
+                    </div>
+                    <div><input class="u-btn" type="submit" value="登 录"/></div>
+
+                    <div class="u-find">
+                        <div style="float:left; width:90px; color:#666;">
+                            <label><input name="remember-me" type="checkbox" id="remember-me" checked="checked"
+                                          style="vertical-align:middle; margin-top:-2px; margin-bottom:1px;"/>七天内登录</label>
+                        </div>
+                        <div style="float:left;"><a href="#" target="_self">忘记密码？</a></div>
+                        <div style="float:right; color:#09F; cursor:pointer;">注册</div>
+                    </div>
+                </div>
+            </form>
+        </div><!--m-lf结束-->
+    </div>
+</div>
+<footer>
+    <div class="u-ft">
+        <ul>
+            <li>深圳市南山区南海大道3688号 邮编：518060 电话：(0755) 26536114 [邮箱]</li>
+            <li>Copyright ©2011- SULCMIS OPAC IV of Shenzhen University Library. All rights reserved.</li>
+            <li>版权所有© 信息中心</li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" th:src="@{js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{js/login/login.js}"></script>
+</body>
+</html>

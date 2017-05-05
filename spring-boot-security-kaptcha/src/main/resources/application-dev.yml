@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+
+druid:
+  datasource:
+    jdbc:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql:///spring_boot?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: xinyuwuhen
+
+kaptcha:
+  image-width: 140
+  image-height: 44
+  session-key: SZU_KAPTCHA_CODE
+  text-font-color: black
+  text-char-length: 4
+  text-font-names: 宋体,楷体,微软雅黑
+  text-font-size: 36
+  background-color-from: loght_gray
+  background-color-to: white
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.eadydb.boot.entity
+
+mapper:
+  identity: MYSQL
+  not-empty: false
+  mappers: com.eadydb.boot.utils.MybatisMapper
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countsql
+
+logging:
+  level:
+    com:
+      eadydb: TRACE
+
+server:
+  port: 8081
+
