@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>spring boot thymeleaf</title>
+</head>
+<body>
+<a th:href="@{/input}">添加</a>
+<br/>
+<table style=" width: 400px;" border="1">
+    <thead>
+    <tr>
+        <td style="width: 10%;">序号</td>
+        <td style="width: 30%;">姓名</td>
+        <td style="width:10%;">年龄</td>
+        <td>地址</td>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="userProfile,index:${userProfiles}">
+        <tr>
+            <td th:text="${index.count}"/>
+            <td th:text="${userProfile.name}"/>
+            <td th:text="${userProfile.age}"/>
+            <td th:text="${userProfile.address}"/>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+
+</body>
+</html>

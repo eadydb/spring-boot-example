@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>spring boot thymeleaf</title>
+</head>
+<body>
+
+<form th:action="@{/create}" th:object="${userProfile}" method="post">
+    <p>姓名: <input type="text" name="name" th:value="*{name}"></p>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
+    <p>年龄: <input type="text" name="age" th:value="*{age}"></p>
+    <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
+
+    <p>地址: <input type="text" name="address" th:value="*{address}"></p>
+    <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+    <p>
+        <button>Submit</button>
+    </p>
+</form>
+</body>
+</html>
