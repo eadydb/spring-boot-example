@@ -41,13 +41,17 @@ public class UserProfileController {
     public String get(ModelMap modelMap) {
         List<UserProfile> userProfiles = userProfileRepository.findAll();
         modelMap.addAttribute("userProfiles", userProfiles);
-        return "list";
+        modelMap.addAttribute("user",true);
+        modelMap.addAttribute("input",false);
+        return "admin/index";
     }
 
     @GetMapping("/input")
     public String input(ModelMap modelMap) {
         modelMap.addAttribute("userProfile", new UserProfile());
-        return "input";
+        modelMap.addAttribute("input",true);
+        modelMap.addAttribute("user",false);
+        return "admin/input";
     }
 
     @PostMapping("/create")
