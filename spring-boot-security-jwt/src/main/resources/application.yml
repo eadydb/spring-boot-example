@@ -1,0 +1,32 @@
+server:
+  port: 8084
+
+# spring configuration
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: springboot
+
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  tokenHead: "Bearer "
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+      register: "auth/register"
+
+
+logging:
+  level:
+    org.springframework:
+      data: DEBUG
+      security: DEBUG
+

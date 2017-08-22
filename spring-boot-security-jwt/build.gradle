@@ -1,0 +1,37 @@
+group 'com.eadydb.boot'
+version '1.0-SNAPSHOT'
+buildscript {
+    ext {
+        springBootVersion = '1.5.4.RELEASE'
+        lombokVersion = '1.16.16'
+        jjwtVersion = '0.7.0'
+    }
+
+    repositories {
+        jcenter()
+//        maven {url "http://maven.aliyun.com/nexus/content/repositories/central/"}
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    jcenter()
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile("org.springframework.boot:spring-boot-starter-data-rest")
+        compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+        compile("org.springframework.boot:spring-boot-starter-security")
+        compile("io.jsonwebtoken:jjwt:${jjwtVersion}")
+        compile("org.projectlombok:lombok:${lombokVersion}")
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+}
